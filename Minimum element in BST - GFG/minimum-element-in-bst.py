@@ -13,17 +13,14 @@ def minValue(root):
     ##Your code here
     def solver(root):
         if root == None:
-            return None
-        lft = solver(root.left)
-        if lft != None:
-            return lft
-        return root
+            return -1
+        if root.left == None:
+            return root.data
+        return solver(root.left)
+        
     if root == None:
         return -1
-    if root.left == None:
-        return root.data
-    ans= solver(root)
-    return ans.data
+    return solver(root)
     
     
 #{ 
