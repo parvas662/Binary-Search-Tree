@@ -10,6 +10,7 @@ If Ceil could not be found, return -1.
 Example 1:
 
 Input:
+
       5
     /   \
    1     7
@@ -17,6 +18,7 @@ Input:
      2 
       \
        3
+       
 X = 3
 Output: 3
 Explanation: We find 3 in BST, so ceil
@@ -24,6 +26,7 @@ of 3 is 3.
 Example 2:
 
 Input:
+
      10
     /  \
    5    11
@@ -31,6 +34,7 @@ Input:
  4   7
       \
        8
+       
 X = 6
 Output: 7
 Explanation: We find 7 in BST, so ceil
