@@ -9,14 +9,13 @@ class Solution:
         def solver(root):
             if root == None:
                 return 
-            if root.left != None:
-                solver(root.left)
+            solver(root.left)
             tar[0] -=1
             if tar[0] == 0:
                 ans[0] = root.val
-            if root.right != None:
-                solver(root.right)
-
+                return 
+            solver(root.right)
+           
         tar = [k]
         ans = [0]
         solver(root)
