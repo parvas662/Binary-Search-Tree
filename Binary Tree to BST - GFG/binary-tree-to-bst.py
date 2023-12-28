@@ -13,6 +13,8 @@ class Solution:
     # Return the root of the generated BST
     def binaryTreeToBST(self, root):
         # code here
+        #approach -> store bt in an array then sort array and use a itterator 
+         #and change value of root in an order traversal and incrementing itterator.
         def solver(root):
             if root == None:
                 return
