@@ -13,25 +13,31 @@ class Node:
 class Solution:
     def bToDLL(self,root):
         # do Code here
+        """ approach -> lets think like a linked list. take two pointers prev and head assign them to null.
+        when reaches to first node of inorder traversal change head position and prev position to root.
+        if head already not None then make connections between prev and root, and move prev to root to attach the next node.
+        """  
+      
         def solver(root):
             if root == None:
                 return None
 
             solver(root.left)
             
-            if head[0] == None:
+            if head[0] == None:    # we got the head of dll
                 head[0] = root
                 prev[0] = root
                 
-            else:    
+            else:    # make connections of root and prev 
                 root.left = prev[0]
                 prev[0].right = root  
             
-            prev[0] = root
+            prev[0] = root   # move prev by 1 step by making prev to head.
+            
             solver(root.right)
 
             
-        head = [None]
+        head = [None]    
         prev = [None]
         solver(root)
         return head[0]
