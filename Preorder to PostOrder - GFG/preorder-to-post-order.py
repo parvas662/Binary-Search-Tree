@@ -14,7 +14,7 @@ def post_order(pre, size) -> Node:
     # approach -> using of upperbound range can solve this problem.
     def solver(high):
         global i
-        if i == size or pre[i] > high:
+        if i == size or pre[i] > high:      #agar index high se bahar ja rha h to.  # low range is not needed here.
             return None
             
         node = Node(pre[i])
