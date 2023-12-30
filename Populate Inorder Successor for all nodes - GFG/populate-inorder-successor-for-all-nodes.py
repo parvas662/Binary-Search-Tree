@@ -9,7 +9,8 @@ class Node:
 
 class Solution:
     def populateNext(self,root):
-        
+        """ apporach -> similar to flatten a bst to sorted list question. think tree as linkedlist.
+        make prev and head ,and move prev as we move in linkedlist. """
         def solver(root):
             if root == None:
                 return
